@@ -38,7 +38,7 @@ var billy = {
     $(".js__popup").simplePopup();
 
     // Вызываем слайдер
-    $('.c_slider').slides();
+    $(".c_slider, .c_slider__760").slides();
 
   },
 

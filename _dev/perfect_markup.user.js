@@ -73,7 +73,7 @@
 					}
 	);
 
-	setLayoutImage("_dev/layout.png");
+	setLayoutImage("_dev/layout_3.png");
 
 //-------------------------------- functions
 
