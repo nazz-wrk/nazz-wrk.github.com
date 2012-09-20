@@ -52,7 +52,8 @@
     }
     .c_input {
       .round(12px);
-      height:45px; padding:0 13px; border-bottom:1px solid #98806b; border-top:1px solid #34271b; text-align:center;
+      width:184px; height:45px; padding:0 13px;
+      border-bottom:1px solid #98806b; border-top:1px solid #34271b; text-align:center;
       background:url("@{img_msk}line.png") 0 0;
     }
     .c_textarea {
@@ -71,7 +72,7 @@
     }
     .c_text { text-align:center; color:#aa9b8d; }
     .c_slider { float:left; margin:-200px 0 0 75px; }
-    .c_slider_mask { width:288px; height:516px; background:url("@{img}icons.png") 0 -125px; }
+    .c_slider_mask { position:relative; width:288px; height:516px; background:url("@{img}icons.png") 0 -125px; }
     .c_slider_container { float:left; width:176px; height:335px; margin:83px 0 0 63px; }
     .c_slider_wrapper {
       z-index:-1;
@@ -106,7 +107,6 @@
     .m__c_subscription_text { margin:0 0 8px 0; }
     .m__c_subscription_button { margin:20px 0 0; }
     .m__input_focus { background:#fff; }
-
 
 
   .footer { float:left; width:100%; margin:-40px 0 20px 0; }
@@ -156,13 +156,10 @@
     position:absolute; z-index:3; top:75px; left:50%; width:310px;
     border-top:1px solid #483323; border-bottom:1px solid #35261a;
     border-left:1px solid #292018; border-right:1px solid #292018;
-    &:hover {
-      .p_close { display:block; }
-    }
   }
     .p_body { display:none; position:fixed; z-index:2; top:0; width:100%; height:100%; background:#1b1b1b; }
     .p_close {
-      display:none; position:absolute; top:-46px; right:0; width:45px; height:45px;
+      position:absolute; top:-46px; right:0; width:45px; height:45px;
       background:url("@{img}icons.png") -180px -80px;
     }
     .p_mask { background:url("@{img_msk}noise.png"); }
@@ -176,6 +173,19 @@
     .m__p_textarea { margin:5px 0 0; }
     .m__p_button { padding:0 52px 2px; margin:15px 0 25px; }
     .m__p_text { color:#88644a; }
+
+
+// Отдельные правила для айфона и айпода
+.m__iphone {
+  // на айОс не работает «for» у лейбла, пока уберем его, потом можно придумать сложную логику через javascript
+  .c_subscription_label { display:none; }
+  // Тут пока вот так все ручками, потом можно подумать почему не работало
+  .p_body { width:760px; height:1035px; }
+  .popup { top:150px; left:400px; }
+}
+.m__ipad {
+  .c_subscription_label { display:none; }
+}
 
 
 // Тут блоки которые связаны с media queries, <760 не задействованы вообще
@@ -257,6 +267,9 @@
 
 
   .background { width:759px; height:1035px; margin:0; background:url("@{img}760/background.png"); }
+
+
+  .popup { top:200px; }
 
 }
 
