@@ -1,0 +1,11 @@
+// ФФ хаки — выравнивают незначительные отличия в рендере
+@-moz-document url-prefix() {
+  .c_subscription_label { margin-top:-47px; height:31px; }
+  // ФФ по другому считает вьюпорт, добавляя в него скролл (15 пикс.),
+  // поэтому нагло уберем в нем ненужный горизонтальный скролл как везде
+  body { overflow-x:hidden; }
+}
+// Вебкит
+@media screen and ( -webkit-min-device-pixel-ratio:0 ) {
+
+}
