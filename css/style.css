@@ -21,6 +21,7 @@ font-weight: bold;
 h3 {
 font-size: 19px;
 line-height: 25px;
+font-weight:bold;
 }
 img {
 border: none;
@@ -99,9 +100,11 @@ padding: 45px 0 0 0;
 }
 .c_top h1 {
 padding: 0 0 15px 0;
+font-weight:bold;
 }
 .c_top h3 {
 padding: 0 0 10px 0;
+font-weight:bold;
 }
 .c_sep {
 padding: 15px 0 20px;
@@ -120,6 +123,7 @@ padding: 0 0 60px 10px;
 }
 .c_bottom_text h1 {
 font-size: 19px;
+font-weight:bold;
 }
 .footer {
 font-size: 10px;
